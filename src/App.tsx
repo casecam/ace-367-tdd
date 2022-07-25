@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 
 export default class App extends Component {
-  public label(name: string) {
-    return `Hello ${name.toUpperCase()}`
-  }
+  public label = 'Hello react'
+
   render() {
     return (
       <div>
-        <h1>{this.label('React')}</h1>
+        <h1>{this.label}</h1>
         <p>Nice TDD</p>
       </div>
     )

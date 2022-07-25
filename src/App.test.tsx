@@ -13,10 +13,10 @@ it('renders the paragraph', () => {
   screen.getByText(/nice tdd/i)
 })
 
-it('generates a label', () => {
-  /* In this test we don’t need a component with TSX and a fake DOM etc. 
-  Its a TypeScript method that returns a string. To conform to the React.Component 
-  constructor signature, we pass in an empty object as props. */
-  const a = new App({})
-  expect(a.label('React')).toBe("Hello React")
-})
+// it('generates a label', () => {
+//   /* In this test we don’t need a component with TSX and a fake DOM etc. 
+//   Its a TypeScript method that returns a string. To conform to the React.Component 
+//   constructor signature, we pass in an empty object as props. */
+//   const a = new App({})
+//   expect(a.label('React')).toBe("Hello React")
+// })
