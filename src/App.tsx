@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class App extends Component {
   public label() {
-    return 'Hello Reacts'
+    return 'Hello React'
   }
   render() {
     return (
