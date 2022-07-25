@@ -4,5 +4,5 @@ import React from 'react';
 import App from './App';
 test('renders the heading', () => {
   render(<App />);
-  screen.getByRole('heading', {name: /hello react/})
+  screen.getByRole('heading', {name: /hello react/i})
 });
