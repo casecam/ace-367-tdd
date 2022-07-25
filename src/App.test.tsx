@@ -7,7 +7,13 @@ it('renders the heading', () => {
   render(<App />);
   screen.getByRole('heading', {name: /hello react/i})
 });
+
 it('renders the paragraph', () => {
   render(<App />);
   screen.getByText(/nice tdd/i)
+})
+
+it('generates a label', () => {
+  const a = new App({})
+  expect(a.label()).toBe("Hello React")
 })

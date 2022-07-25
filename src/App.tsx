@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 
 export default class App extends Component {
+  public label() {
+    return 'Hello Reacts'
+  }
   render() {
     return (
       <div>
-        <h1>Hello React</h1>
+        <h1>{this.label()}</h1>
         <p>Nice TDD</p>
       </div>
     )
