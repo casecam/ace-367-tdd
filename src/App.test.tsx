@@ -4,6 +4,6 @@ import React from 'react';
 import App from './App';
 test('renders without crashing', () => {
   render(<App />);
-  expect(1).toBe(2)
+  expect(1).toBe(1)
   
 });
