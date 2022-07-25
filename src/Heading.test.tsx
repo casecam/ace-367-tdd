@@ -3,7 +3,7 @@ import Heading from './Heading';
 
 it('renders the default heading', () => {
   render(<Heading />)
-  screen.getByText(/hello react/)
+  screen.getByText(/hello react/i)
 })
 
 it('renders the heading', () => {
