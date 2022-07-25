@@ -1,3 +1,7 @@
 import * as React from 'react'
-const Heading: React.FC = () => <h1>Hello React</h1>
+interface IHeadingProps {
+  recipient: string
+}
+
+const Heading: React.FC<IHeadingProps> = (props) => <h1>Hello {props.recipient}</h1>
 export default Heading
