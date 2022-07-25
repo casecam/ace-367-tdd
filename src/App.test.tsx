@@ -1,11 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import App, { Heading } from './App';
-
-it('renders the heading', () => {
-  render(<Heading />)
-  screen.getByRole('heading', {name: /hello react/i})
-});
+import App from './App';
 
 it('renders the paragraph', () => {
   render(<App />);

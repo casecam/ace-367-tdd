@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-
-export const Heading = () => <h1>Hello React</h1>
+import Heading from './Heading';
 
 export default class App extends Component {
   render() {
