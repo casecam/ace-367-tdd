@@ -6,7 +6,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>{this.label}</h1>
+        <h1 onClick={() => alert('Hello World')}>{this.label}</h1>
         <p>Nice TDD</p>
       </div>
     )
