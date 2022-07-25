@@ -1,9 +1,8 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import React from 'react';
 
 import App from './App';
-test('renders without crashing', () => {
+test('renders the heading', () => {
   render(<App />);
-  expect(1).toBe(1)
-  
+  screen.getByRole('heading', {name: /hello react/})
 });
