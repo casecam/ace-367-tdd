@@ -4,8 +4,8 @@ import React from 'react';
 import App from './App';
 
 it('renders the heading', () => {
-  render(<App />);
-  screen.getByRole('heading', {name: /hello react/i})
+  render(<Heading />);
+  screen.getByText(/hello react/i)
 });
 
 it('renders the paragraph', () => {
