@@ -1,7 +1,8 @@
 import * as React from 'react'
 interface IHeadingProps {
-  recipient: string
+  // ? needed for recipient's default prop value in the component
+  recipient?: string
 }
 
-const Heading: React.FC<IHeadingProps> = (props) => <h1>Hello {props.recipient}</h1>
+const Heading: React.FC<IHeadingProps> = ({ recipient = 'React'}) => <h1>Hello {recipient}</h1>
 export default Heading
