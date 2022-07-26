@@ -6,8 +6,8 @@ interface ICounterProps {
   onCounterIncrease: (isShift: boolean) => void
 }
 
-const Counter: React.FC<ICounterProps> = (
-  {label = 'Count', count, onCounterIncrease}
+const Counter = (
+  {label = 'Count', count, onCounterIncrease}: ICounterProps
   ) => {
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
       onCounterIncrease(event.shiftKey)

@@ -21,9 +21,18 @@ it('should default start a zero', () => {
   screen.getByText(/0/i)
 })
 
-it('should be called with shiftKey false', () => {
+it('should call the click handler with false', () => {
   render(<Counter count={0} onCounterIncrease={handler}  />)
   const incrementor = screen.getByTestId(/counter/i)
   user.click(incrementor, {shiftKey: false})
+  expect(handler).toBeCalledTimes(1)
   expect(handler).toBeCalledWith(false)
+})
+
+it('should call the click handler with true', () => {
+  render(<Counter count={0} onCounterIncrease={handler}  />)
+  const incrementor = screen.getByTestId(/counter/i)
+  user.click(incrementor, {shiftKey: true})
+  expect(handler).toBeCalledTimes(1)
+  expect(handler).toBeCalledWith(true)
 })
