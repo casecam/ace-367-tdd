@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface ICounterProps {
   label?: string
   count: number
