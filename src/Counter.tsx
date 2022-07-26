@@ -21,8 +21,9 @@ export default class Counter extends Component<ICounterProps, ICounterState> {
     }
   }
 
-  public handleClick = () => {
-    this.setState({count: this.state.count + 1})
+  public handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    const inc: number = event.shiftKey ? 10 : 1
+    this.setState({count: this.state.count + inc})
   }
 
   render() {
