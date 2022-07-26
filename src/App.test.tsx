@@ -1,4 +1,6 @@
 import { render, screen } from '@testing-library/react';
+import user from '@testing-library/user-event';
+
 
 import App from './App';
 
@@ -14,10 +16,16 @@ it('renders the app and the heading', () => {
   screen.getByText(/0/i)
 })
 
-// it('generates a label', () => {
-//   /* In this test we don’t need a component with TSX and a fake DOM etc. 
-//   Its a TypeScript method that returns a string. To conform to the React.Component 
-//   constructor signature, we pass in an empty object as props. */
-//   const a = new App({})
-//   expect(a.label('React')).toBe("Hello React")
-// })
+it('updates state when increment is called without shift', () => {
+  render(<App />)
+  screen.getByText(/0/i)
+  user.click(screen.getByTestId('counter'), {shiftKey: true})
+  screen.getByText(/1/i)
+})
+
+it('updates state when increment is called with shift', () => {
+  render(<App />)
+  screen.getByText(/0/i)
+  user.click(screen.getByTestId('counter'), {shiftKey: false})
+  screen.getByText(/10/i)
+})
