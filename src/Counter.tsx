@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 interface ICounterProps {
   label?: string
+  start?: number
 }
 
 interface ICounterState {
@@ -9,13 +10,14 @@ interface ICounterState {
 }
 export default class Counter extends Component<ICounterProps, ICounterState> {
   public static defaultProps = {
-    label: 'Count'
+    label: 'Count',
+    start: 0
   }
 
   constructor(props: ICounterProps) {
     super(props)
     this.state = {
-      count: 0
+      count: props.start!
     }
   }
 
