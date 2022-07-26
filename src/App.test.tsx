@@ -11,6 +11,7 @@ it('renders the app and the heading', () => {
   render(<App />)
   screen.getByRole('heading', { name: /hello react/i})
   screen.getByText(/current/i)
+  screen.getByText(/1/i)
 })
 
 // it('generates a label', () => {
