@@ -35,5 +35,5 @@ it('should shift-click increment the count by ten', () => {
   screen.getByText(0)
   const incrementor = screen.getByTestId(/counter/i)
   user.click(incrementor, {shiftKey: true})
-  screen.getByText(9)
+  screen.getByText(10)
 })
