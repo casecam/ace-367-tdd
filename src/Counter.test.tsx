@@ -10,3 +10,8 @@ it('should render a counter with a custom label', () => {
   render(<Counter label={'Current'} />)
   screen.getByText(/current/i)
 })
+
+it('should default start a zero', () => {
+  render(<Counter label={"Current"} />)
+  screen.getByText(/0/i)
+})
