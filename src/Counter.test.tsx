@@ -5,3 +5,8 @@ it('should render a counter', () => {
   render(<Counter />)
   screen.getByText(/count/i)
 })
+
+it('should render a counter with a custom label', () => {
+  render(<Counter label={'Current'} />)
+  screen.getByText(/current/i)
+})
