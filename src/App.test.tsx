@@ -10,6 +10,7 @@ it('renders the paragraph', () => {
 it('renders the app and the heading', () => {
   render(<App />)
   screen.getByRole('heading', { name: /hello react/i})
+  screen.getByText(/current/i)
 })
 
 // it('generates a label', () => {

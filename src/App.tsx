@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Counter from './Counter';
 import Heading from './Heading';
 
 export default class App extends Component {
@@ -6,6 +7,7 @@ export default class App extends Component {
     return (
       <div>
         <Heading />
+        <Counter label={"Current"} />
         <p>Nice TDD</p>
       </div>
     )
