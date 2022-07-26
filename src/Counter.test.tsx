@@ -21,9 +21,9 @@ it('should default start a zero', () => {
   screen.getByText(/0/i)
 })
 
-it('should increment the count by one', () => {
+it('should be called with shiftKey false', () => {
   render(<Counter count={0} onCounterIncrease={handler}  />)
   const incrementor = screen.getByTestId(/counter/i)
-  user.click(incrementor, {shiftKey: true})
+  user.click(incrementor, {shiftKey: false})
   expect(handler).toBeCalledWith(false)
 })
