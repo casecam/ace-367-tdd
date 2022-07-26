@@ -19,13 +19,13 @@ it('renders the app and the heading', () => {
 it('updates state when increment is called without shift', () => {
   render(<App />)
   screen.getByText(/0/i)
-  user.click(screen.getByTestId('counter'), {shiftKey: true})
+  user.click(screen.getByTestId('counter'), {shiftKey: false})
   screen.getByText(/1/i)
 })
 
 it('updates state when increment is called with shift', () => {
   render(<App />)
   screen.getByText(/0/i)
-  user.click(screen.getByTestId('counter'), {shiftKey: false})
+  user.click(screen.getByTestId('counter'), {shiftKey: true})
   screen.getByText(/10/i)
 })
