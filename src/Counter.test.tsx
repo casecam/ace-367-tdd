@@ -15,3 +15,8 @@ it('should default start a zero', () => {
   render(<Counter label={"Current"} />)
   screen.getByText(/0/i)
 })
+
+it('should custom start at another value', () => {
+  render(<Counter label={'Current'} start={10} />)
+  screen.getByText(10)
+})
