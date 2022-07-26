@@ -25,7 +25,7 @@ it('should custom start at another value', () => {
 
 it('should increment the count by one', () => {
   render(<Counter />)
+  const incrementor = screen.getByTestId(/counter/i)
+   user.click(incrementor)
   screen.getByText(/1/i)
-  const increment = user.click(screen.getByRole('button', {name: /counter/i}))
-  expect(increment).toBe(2)
 })
