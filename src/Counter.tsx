@@ -1,16 +1,27 @@
-import React, { Component } from 'react'
+import React from 'react'
+
+interface ICounterProps {
+  label?: string
+  count: number
+  onCounterIncrease: (isShift: boolean) => void
+}
 
 const Counter: React.FC<ICounterProps> = (
-  {label = 'Count', count}
-) => {
+  {label = 'Count', count, onCounterIncrease}
+  ) => {
+    const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+      onCounterIncrease(event.shiftKey)
+    }
     return (
       <div
         data-testid="counter"
         className="counter"
-        // onClick={handleClick}
+        onClick={handleClick}
       >
         <label>{label}</label>
         <span>{count}</span>
       </div>
     )
 }
+
+export default Counter

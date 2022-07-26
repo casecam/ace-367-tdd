@@ -2,12 +2,31 @@ import React, { Component } from 'react'
 import Counter from './Counter';
 import Heading from './Heading';
 
-export default class App extends Component {
-  render() {
+interface ICounterState {
+  count: number
+}
+export default class App extends Component<object, ICounterState> {
+  constructor(props: {}) {
+    super(props)
+    this.state = {
+      count: 0
+    }
+  }
+
+  public increment = (isShift: boolean) => {
+    const inc: number = isShift ? 10 : 1;
+    this.setState({count: this.state.count + inc});
+}
+
+  public render() {
     return (
       <div>
         <Heading />
-        <Counter label={"Current"} />
+        <Counter 
+          label={"Current"} 
+          count={this.state.count}
+          onCounterIncrease={this.increment}
+        />
         <p>Nice TDD</p>
       </div>
     )
